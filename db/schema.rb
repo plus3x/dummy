@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20130803203412) do
   end
 
   create_table "categories_forms", force: true do |t|
-    t.integer "categories_id"
+    t.integer "category_id"
     t.integer "forms_id"
   end
 

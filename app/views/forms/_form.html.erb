@@ -17,7 +17,7 @@
   </div>
   
   <div class="field">
-    <%=  f.select :categories, options_for_select( Category.find(:all).map(&:title) ) %>
+    <%=  f.select :category, options_for_select( Category.find(:all).map(&:title) ) %>
   </div>
   
   <div class="actions">
