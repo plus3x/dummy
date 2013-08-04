@@ -15,6 +15,7 @@ class FormsController < ApplicationController
   # GET /forms/new
   def new
     @form = Form.new
+    @category = nil
   end
 
   # GET /forms/1/edit
@@ -69,6 +70,6 @@ class FormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def form_params
-      params.require(:form).permit(:name)
+      params.require(:form).permit(:name, :category_ids, :categories)
     end
 end

@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20130803203412) do
 
   create_table "categories_forms", force: true do |t|
     t.integer "category_id"
-    t.integer "forms_id"
+    t.integer "form_id"
   end
 
   create_table "forms", force: true do |t|

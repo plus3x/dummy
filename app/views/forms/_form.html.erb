@@ -17,7 +17,14 @@
   </div>
   
   <div class="field">
-    <%=  f.select :category, options_for_select( Category.find(:all).map(&:title) ) %>
+    <!--<%= f.select :categories, options_for_select( Category.all.collect { |e| [ e.title, e ] } ), {}, :multiple => true %>-->
+    <!--<% Category.all.each do |category| %>
+    <div>
+      <%= check_box_tag :categories, category %>
+      <%= label_tag category.title -%>
+    </div>
+    <% end -%>-->
+    <%= f.select :category_ids, options_for_select(Category.all.collect { |e| [e.title, e.id] }) %>
   </div>
   
   <div class="actions">

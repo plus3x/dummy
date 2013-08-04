@@ -3,6 +3,7 @@
 <p>
   <strong>Name:</strong>
   <%= @form.name %>
+  <%= @form.categories.map(&:title).join ', ' %>
 </p>
 
 <%= link_to 'Edit', edit_form_path(@form) %> |
