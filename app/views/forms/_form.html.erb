@@ -17,7 +17,7 @@
   </div>
   
   <div class="field">
-    <!--<%= f.select :category_ids, options_for_select(Category.all.map { |e| [e.title, e.id] }) %>-->
+    <!--<%= f.select :category_ids, options_from_collection_for_select(Category.all, :id, :title), {include_blank: false}, multiple: true %>-->
     <!--<%= f.collection_select :category_ids, Category.all, :id, :title, {include_blank: false}, multiple: true %>-->
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :title do |b| %>
       <%= b.check_box %> <%= b.label %> <br/>

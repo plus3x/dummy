@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th></th>
+      <th>Categories</th>
       <th></th>
       <th></th>
     </tr>
@@ -14,7 +14,7 @@
     <% @forms.each do |form| %>
       <tr>
         <td><%= form.name %></td>
-        <td></td>
+        <td><%= form.categories.map(&:title).join ', ' %></td>
         <td><%= link_to 'Show', form %></td>
         <td><%= link_to 'Edit', edit_form_path(form) %></td>
         <td><%= link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
